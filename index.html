@@ -3,250 +3,167 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Valentine Nthigah- Portfolio</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
-  <!-- Font Awesome for social icons -->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
+  <title>Valentine Nthigah - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Inter', sans-serif;
     }
+
     body {
-      background-color: #f4f4f4;
+      background: #ffffff;
       color: #333;
-      transition: background-color 0.3s, color 0.3s;
+      padding: 20px;
     }
-    body.dark {
-      background-color: #121212;
-      color: #ddd;
+
+    nav {
+      text-align: right;
+      margin-bottom: 20px;
     }
-    header {
-      background: url('backgrounw.jpeg') no-repeat center center/cover;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-      position: relative;
-      padding: 0 20px;
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #0073b1;
+      font-weight: 600;
     }
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
-    header p {
-      font-size: 1.5rem;
-    }
-    .dark-toggle {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: rgba(0,0,0,0.6);
-      border: none;
-      color: white;
-      padding: 10px;
-      border-radius: 50%;
-      cursor: pointer;
-      font-size: 1.2rem;
-    }
-    .header-social-links {
-      margin-top: 15px;
-    }
-    .header-social-links a {
-      margin: 0 10px;
-      color: #dfe6eb;
-      font-size: 1.8rem;
-      transition: color 0.3s;
-    }
-    .header-social-links a:hover {
-      color:#1f669a;
-    }
+
     .container {
-      width: 80%;
-      margin: 50px auto;
-    }
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: #2c3e50;
-    }
-    .about, .experience, .projects, .contact {
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      margin-bottom: 40px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    body.dark .about,
-    body.dark .experience,
-    body.dark .projects,
-    body.dark .contact {
-      background: #1e1e1e;
-      box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
-    }
-    .experience h3, .projects h3 {
-      margin-top: 10px;
-      color: #2980b9;
-    }
-    .project-item {
       display: flex;
+      gap: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .left-column {
+      flex: 1;
+      max-width: 300px;
+    }
+
+    .left-column img {
+      width: 100%;
+      border-radius: 10px;
       margin-bottom: 20px;
-      align-items: center;
-      flex-wrap: wrap;
     }
-    .project-item img {
-      width: 150px;
-      height: 100px;
-      border-radius: 8px;
-      margin-right: 20px;
-      object-fit: cover;
+
+    .left-column h1 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
     }
+
+    .left-column p {
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+
+    .left-column a {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: #0073b1;
+      font-weight: 600;
+    }
+
     .social-links {
-      text-align: center;
       margin-top: 20px;
     }
+
     .social-links a {
-      display: inline-block;
+      margin-right: 15px;
+      font-size: 1.3rem;
+      color: #333;
       text-decoration: none;
-      color: #2980b9;
-      margin: 0 10px;
-      font-size: 1.5rem;
-      transition: color 0.3s;
     }
-    .social-links a:hover {
-      color: #1f669a;
+
+    .right-column {
+      flex: 2;
     }
-    .contact a.button {
-      display: inline-block;
-      text-decoration: none;
-      color: white;
-      background: #2980b9;
-      padding: 10px 20px;
-      border-radius: 5px;
+
+    .right-column h2 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #000;
+    }
+
+    .project {
+      margin-bottom: 30px;
+    }
+
+    .project img {
+      width: 100%;
+      border-radius: 8px;
       margin-top: 10px;
-      transition: background 0.3s;
+      margin-bottom: 10px;
     }
-    .contact a.button:hover {
-      background: #1f669a;
+
+    .tags span {
+      display: inline-block;
+      background-color: #f0f0f0;
+      color: #555;
+      font-size: 0.75rem;
+      padding: 4px 8px;
+      margin: 2px;
+      border-radius: 5px;
     }
-    .footer {
-      text-align: center;
-      padding: 20px;
-      background: #2c3e50;
-      color: white;
+
+    footer {
       margin-top: 40px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
-  <header>
-    <button class="dark-toggle" onclick="toggleDarkMode()">
-      <i class="fa-solid fa-moon"></i>
-    </button>
-    <h1>Valentine Nthigah</h1>
-    <p>Data Scientist | Machine Learning Expert | BI Professional | Business Insights</p>
-    <div class="header-social-links">
-      <a href="https://linkedin.com/in/valentine-nthigah" target="_blank" title="LinkedIn">
-        <i class="fa-brands fa-linkedin"></i> LinkedIn
-      </a>
-      <a href="https://github.com/valentinewawira-o" target="_blank" title="GitHub">
-        <i class="fa-brands fa-github"></i> GitHub
-      </a>
-      <a href="https://medium.com/@wawiranthigah20" target="_blank" title="Medium">
-        <i class="fa-brands fa-medium"></i> Medium
-      </a>
-    </div>
-  </header>
 
-  <div class="container">
-    <section class="about">
-      <h2>About Me</h2>
-      <p>
-        I am a Data Analyst and Business Intelligence Professional with expertise in data-driven decision-making, commercial analytics, and logistics intelligence. I transform raw data into actionable insights that drive business growth and operational efficiency.
-      </p>
-      <p>
-        Depth of knowledge in collecting and organizing large datasets, performing statistical analysis, and developing data models.
-      </p>
-      <p>
-        Skilled in SQL, Python, machine learning, and data visualization and committed to staying abreast of emerging trends in data analytics.
-      </p>
-    </section>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="Valentine.N Resume.pdf" download>Resume</a>
+  </nav>
 
-    <section class="experience">
-      <h2>Work Experience</h2>
-      <h3>Commercial Analyst - Burn Manufacturing</h3>
-      <p>
-        Specialized in sales and market data analysis, forecasting trends, and optimizing pricing strategies to improve business performance.
-      </p>
-      <h3>Data Analyst Consultant</h3>
-      <p>
-        Worked on data science and analytics projects, helping businesses leverage big data, ETL pipelines, and visualization tools for strategic decision-making.
-      </p>
-    </section>
+  <div class="container" id="home">
+    <div class="left-column">
+      <img src="your-photo.jpg" alt="Valentine Nthigah">
+      <h1>Valentine Nthigah</h1>
+      <p>Data Scientist and BI Professional with experience in machine learning, data visualization, and business analytics. Passionate about turning complex data into strategic decisions.</p>
+      <a href="https://linkedin.com/in/valentine-nthigah" target="_blank">View my LinkedIn Profile</a>
 
-    <section class="projects">
-      <h2>Projects</h2>
-      <div class="project-item">
-        <img src="project1.png" alt="Stock Market Pipeline" />
-        <div>
-          <h3>Stock Market Data Pipeline</h3>
-          <p>
-            Built a real-time stock market data pipeline using Apache Kafka, Spark, and NoSQL databases for high-frequency trading insights.
-          </p>
-        </div>
-      </div>
-      <div class="project-item">
-        <img src="project2.jpg" alt="GPS Ambulance System" />
-        <div>
-          <h3>GPS-Based Ambulance Optimization</h3>
-          <p>
-            Developed a real-time ambulance tracking and dispatch system leveraging big data streaming to improve emergency response times.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact">
-      <h2>Contact Me</h2>
-      <p>If you're interested in collaborating, feel free to reach out!</p>
-      <a class="button" href="mailto:wawiranthigah20@gmail.com">Email Me</a>
-      <br /><br />
-      <a class="button" href="Valentine.N resume.pdf" download>Download My Resume</a>
       <div class="social-links">
-        <a href="https://linkedin.com/in/valentine-nthigah" target="_blank" title="LinkedIn">
-          <i class="fa-brands fa-linkedin"></i> LinkedIn
-        </a>
-        <a href="https://github.com/valentinewawira-o" target="_blank" title="GitHub">
-          <i class="fa-brands fa-github"></i> GitHub
-        </a>
-        <a href="https://medium.com/@wawiranthigah20" target="_blank" title="Medium">
-          <i class="fa-brands fa-medium"></i> Medium
-        </a>
+        <a href="https://github.com/valentinewawira-o" title="GitHub" target="_blank">GitHub</a>
+        <a href="https://twitter.com/Valentine" title="Twitter" target="_blank">Twitter</a>
       </div>
-    </section>
+    </div>
+
+    <div class="right-column">
+      <h2>Selected Projects in Data Science, Machine Learning, and Analytics</h2>
+
+      <div class="project">
+        <h3>Stock Market Data Pipeline</h3>
+        <p>Built a real-time pipeline using Apache Kafka, Spark, and NoSQL databases to support high-frequency trading analytics and dashboards.</p>
+        <div class="tags">
+          <span>Python</span><span>Kafka</span><span>Spark</span><span>NoSQL</span>
+        </div>
+        <img src="project1.png" alt="Stock Market Pipeline">
+      </div>
+
+      <div class="project">
+        <h3>GPS-Based Ambulance Dispatch Optimization</h3>
+        <p>Designed a real-time ambulance tracking system using big data streaming and geospatial analytics to optimize emergency response.</p>
+        <div class="tags">
+          <span>Python</span><span>Streaming</span><span>GeoJSON</span><span>Dash</span>
+        </div>
+        <img src="project2.jpg" alt="Ambulance Dispatch Project">
+      </div>
+    </div>
   </div>
 
-  <footer class="footer">
-    <p>&copy; 2025 Valentine Nthigah | Portfolio</p>
+  <footer>
+    &copy; 2025 Valentine Nthigah — All rights reserved
   </footer>
 
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark');
-      const toggleButton = document.querySelector('.dark-toggle');
-      if (document.body.classList.contains('dark')) {
-        toggleButton.innerHTML = '<i class="fa-solid fa-sun"></i>';
-      } else {
-        toggleButton.innerHTML = '<i class="fa-solid fa-moon"></i>';
-      }
-    }
-  </script>
 </body>
 </html>
